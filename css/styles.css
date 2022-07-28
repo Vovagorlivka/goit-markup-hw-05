@@ -144,7 +144,7 @@ ul {
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 .our-features {
@@ -344,10 +344,11 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #afb1b8;
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: #afb1b8;
 }
 .social-icon {
   fill: #ffffff;
