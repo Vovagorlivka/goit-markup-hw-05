@@ -61,6 +61,7 @@ a {
   font-size: 26px;
   color: #000000;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .web {
@@ -101,10 +102,12 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .curent {
   color: var(--accent-color);
+  position: relative;
 }
 
 .auth-nav {
@@ -192,7 +195,9 @@ ul {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
+.item {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* .auth-nav + .portfolio-nav {
   margin-left: 50px;
 } */
@@ -200,6 +205,17 @@ ul {
 .page-header {
   text-decoration: none;
   border-bottom: 1px solid #ececec;
+}
+.site-nav .curent::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  display: block;
+  border-radius: 4px;
 }
 .page-header .item.primary::after {
 }
@@ -247,6 +263,7 @@ ul {
   cursor: pointer;
   line-height: 1.6;
   letter-spacing: 0.06em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* section  */
@@ -344,14 +361,26 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #afb1b8;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link-footer {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
-  fill: #ffffff;
+  fill: #afb1b8;
 }
 .social-link:hover,
 .social-link:focus {
@@ -403,6 +432,7 @@ ul {
   width: 100%;
   justify-content: center;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon:hover,
 .customers-icon:focus {
@@ -440,6 +470,7 @@ ul {
   font-size: 26px;
   color: var(--primary-white-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adress {
@@ -456,11 +487,13 @@ ul {
 .footer-phone {
   line-height: 1.714;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-mail {
   line-height: 1.714;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 9px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* портфоліо */
@@ -486,6 +519,7 @@ ul {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter:hover,
@@ -510,6 +544,7 @@ ul {
 .portfolio-exampl {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .port-exampl {
   position: relative;
@@ -568,6 +603,7 @@ ul {
 .footer-map {
   font-style: normal;
   color: var(--primary-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-map:hover,
@@ -584,6 +620,7 @@ ul {
   font-weight: 500;
   text-decoration: none;
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pic-mail {
@@ -638,6 +675,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -648,13 +687,13 @@ ul {
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: #rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms linear, visibity 250ms linear;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
-.backdrop.is-hidden .modal {
+/* .backdrop.is-hidden .modal {
   transform: scale(0.1);
   transform: translate (-50%, -50%), scale(0.1);
-}
+} */
 
 .modal {
   width: 500px;
@@ -666,7 +705,7 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms linear;
+  /* transition: transform 250ms linear; */
 }
 .modal-close {
   width: 30px;
